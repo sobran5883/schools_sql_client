@@ -10,6 +10,7 @@ export default function Schools() {
     const fetchAllSchools = async () => {
       try {
         const res = await axios.get("https://schools-mysqldb.onrender.com/schools");
+        // const res = await axios.get("http://localhost:8800/schools");
         setSchools(res.data);
       } catch (err) {
         console.error("Error fetching schools:", err);
@@ -21,6 +22,7 @@ export default function Schools() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`https://schools-mysqldb.onrender.com/schools/${id}`);
+      // await axios.delete(`http://localhost:8800/schools/${id}`);
       setSchools((prev) => prev.filter((school) => school.id !== id));
     } catch (err) {
       console.error("Error deleting school:", err);

@@ -49,8 +49,9 @@ export default function AddSchoolPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://schools-mysqldb.onrender.com/schools", school); // Update URL if deployed
-      router.push("/"); // Redirect to the home page after successful addition
+      await axios.post("https://schools-mysqldb.onrender.com/schools", school);
+      // await axios.post("http://localhost:8800/schools", school);
+      router.push("/"); 
     } catch (err) {
       console.error("Error adding school:", err);
     }

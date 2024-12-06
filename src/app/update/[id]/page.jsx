@@ -23,6 +23,7 @@ export default function UpdateSchool() {
     const fetchSchool = async () => {
       try {
         const res = await axios.get(`https://schools-mysqldb.onrender.com/schools/${id}`);
+        // const res = await axios.get(`http://localhost:8800/schools/${id}`);
         setSchool(res.data);
       } catch (err) {
         console.error("Error fetching school details:", err);
@@ -58,8 +59,9 @@ export default function UpdateSchool() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://schools-mysqldb.onrender.com/schools/${id}`, school);
-      router.push("/schools");
+      await axios.put(`https://schools-mysqldb.onrender.com/school/${id}`, school);
+      // await axios.put(`http://localhost:8800/school/${id}`, school);
+      router.push("/");
     } catch (err) {
       console.error("Error updating school:", err);
     }
