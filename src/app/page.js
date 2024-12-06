@@ -34,17 +34,11 @@ export default function Schools() {
           <div className="flex gap-2 flex-col justify-center items-center" key={school.id}>
             <div className="flex flex-col gap-2">
               {school.image && (
-                <img
-                  src={school.image}
-                  alt={school.name}
-                  style={{ width: "250px", height: "150px" }}
-                />
+                <img  src={school.image}  alt={school.name}  style={{ width: "250px", height: "150px" }}/>
               )}
-              <h2>Name: {school.name}</h2>
-              <p>Address: {school.address}</p>
-              <p>
-                State: {school.city}, {school.state}
-              </p>
+              <h2 className="flex gap-2"><p className=" font-semibold">Name:</p> {school.name}</h2>
+              <h1 className="flex gap-2"><p className=" font-semibold">Address:</p> {school.address}</h1>
+              <h1 className="flex gap-2"><p className=" font-semibold">State:</p>  {school.city}, {school.state}</h1>
               {/* <p>Contact: {school.contact}</p>
               <p>Email: {school.email}</p> */}
             </div>
