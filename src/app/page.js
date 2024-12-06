@@ -29,9 +29,9 @@ export default function Schools() {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="w-10/12 my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="w-10/12 mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {schools.map((school) => (
-          <div className="flex gap-2 flex-col justify-center items-center" key={school.id}>
+          <div className="flex gap-2 flex-col justify-center items-center border-2 py-6 rounded-sm" key={school.id}>
             <div className="flex flex-col gap-2">
               {school.image && (
                 <img  src={school.image}  alt={school.name}  style={{ width: "250px", height: "150px" }}/>

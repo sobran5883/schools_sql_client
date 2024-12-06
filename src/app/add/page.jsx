@@ -60,7 +60,7 @@ export default function AddSchoolPage() {
     <div className='w-full flex justify-center'>
 
       <form onSubmit={handleSubmit} className="w-11/12 sm:w-8/12 md:w-6/12 lg:w-4/12 flex justify-center flex-col gap-4">
-      <h1>Add New School details</h1>
+      <h1 className='text-lg font-semibold'>Add New School details</h1>
         <Input
           type="text"
           name="name"
